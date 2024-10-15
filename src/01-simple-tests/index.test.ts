@@ -1,7 +1,7 @@
 // Uncomment the code below and write your tests
 import { simpleCalculator, Action } from './index';
 
-describe.only('simpleCalculator tests', () => {
+describe('simpleCalculator tests', () => {
   test('should add two numbers', () => {
     expect(simpleCalculator({ a: 10, b: 5, action: '+' })).toBe(15);
   });
@@ -19,7 +19,7 @@ describe.only('simpleCalculator tests', () => {
   });
 
   test('should exponentiate two numbers', () => {
-    expect(simpleCalculator({ a: 10, b: 5, action: '**' })).toBe(100000);
+    expect(simpleCalculator({ a: 10, b: 5, action: '^' })).toBe(100000);
   });
 
   test('should return null for invalid action', () => {
