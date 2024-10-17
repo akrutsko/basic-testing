@@ -3,9 +3,9 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { doStuffByInterval, doStuffByTimeout, readFileAsynchronously } from '.';
 
-jest.mock('path', () => ({ join: jest.fn() }));
-jest.mock('fs', () => ({ existsSync: jest.fn() }));
-jest.mock('fs/promises', () => ({ readFile: jest.fn() }));
+jest.mock('path');
+jest.mock('fs');
+jest.mock('fs/promises');
 
 describe('doStuffByTimeout', () => {
   beforeAll(() => {
